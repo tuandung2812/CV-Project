@@ -1,0 +1,15 @@
+checkpoint: "./model/checkpoint_ssd300_no_augment.pth.tar"  # path to model checkpoint, None if none
+batch_size: 16  # batch size
+iterations: 60000  # number of iterations to train
+workers: 2 # number of workers for loading data in the DataLoader
+print_freq: 200  # print training status every __ batches
+lr: 1e-4  # learning rate
+momentum: 0.9 #momentum
+decay_lr_at:  # decay learning rate after these many iterations
+  - 40000
+  - 50000
+decay_lr_to: 0.1  # decay learning rate to this fraction of the existing learning rate
+momentum: 0.9  # momentum
+weight_decay: 5e-4  # weight decay
+n_classes: 2
+#image_dim: 300
